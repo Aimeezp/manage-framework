@@ -1,6 +1,6 @@
-# backend-field-test
+# manager
 
-> 场测管理
+> 平台
 
 ## Build Setup
 
