@@ -109,10 +109,10 @@
           align="center"
           min-width="80px"
           label="通过率">
-          <template slot-scope="scope">
-            <p v-if="scope.row.deviceCount === 0 || scope.row.passCount === 0">0</p>
-            <p v-else>{{(scope.row.passCount/scope.row.deviceCount).toFixed(2)*100}}%</p>
-          </template>
+          <!--<template slot-scope="scope">-->
+            <!--<p v-if="scope.row.deviceCount === 0 || scope.row.passCount === 0">0</p>-->
+            <!--<p v-else>{{(scope.row.passCount/scope.row.deviceCount).toFixed(2)*100}}%</p>-->
+          <!--</template>-->
         </el-table-column>
         <el-table-column
           prop="operation"

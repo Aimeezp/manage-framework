@@ -3,7 +3,7 @@ import { backendIp } from '../../assets/js/baseIp';
 const base = `http://${backendIp}/install`;
 
 export default {
-  testList: `${base}/getTestSheet`, // 测试列表
+  testList: '/getTestSheet', // 测试列表
   newTest: `${base}/addTestSheet`, // 新建测试提交
   projectData: `${base}/getInfo`, // 新建测试获取数据
   detailsList: `${base}/getTestSheetDetailById`, // 测试详情列表

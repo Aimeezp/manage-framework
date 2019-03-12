@@ -106,37 +106,38 @@ export default {
       }
     },
     onlineFun() {
-      if (this.form.userName === '' || this.form.password === '') {
-        this.errText = '用户名或密码不能为空';
-        this.showTip = true;
-        return;
-      }
-      this.showTip = false;
-
-      window.vaApi.requestLogin(this.form).then((res) => {
-        const { status, data } = res.data;
-        if (Number(status) === 1) {
-          if (this.checked) {
-            const localUserObj = {};
-            const localPwdObj = {};
-            const userV = {};
-            const pwdV = {};
-            userV[this.userNameKey] = Utils.Encrypt(this.form.userName);
-            pwdV[this.pwdKey] = Utils.Encrypt(this.form.password);
-            localUserObj[this.userNameKey] = userV;
-            localPwdObj[this.pwdKey] = pwdV;
-            Local.set(localUserObj);
-            Local.set(localPwdObj);
-          }
-          delete data.authorities;
-          data.author = 'smoke,cover,environment,device,hydrant,dust,doorLock,geoMonitor,dustbin';
-          this.$store.commit('SET_USERINFO', data);
-          this.$router.push({ path: '/list' });
-        } else {
-          this.errText = '用户名或密码错误';
-          this.showTip = true;
-        }
-      });
+      this.$router.push({ path: '/list' });
+      // if (this.form.userName === '' || this.form.password === '') {
+      //   this.errText = '用户名或密码不能为空';
+      //   this.showTip = true;
+      //   return;
+      // }
+      // this.showTip = false;
+      //
+      // window.vaApi.requestLogin(this.form).then((res) => {
+      //   const { status, data } = res.data;
+      //   if (Number(status) === 1) {
+      //     if (this.checked) {
+      //       const localUserObj = {};
+      //       const localPwdObj = {};
+      //       const userV = {};
+      //       const pwdV = {};
+      //       userV[this.userNameKey] = Utils.Encrypt(this.form.userName);
+      //       pwdV[this.pwdKey] = Utils.Encrypt(this.form.password);
+      //       localUserObj[this.userNameKey] = userV;
+      //       localPwdObj[this.pwdKey] = pwdV;
+      //       Local.set(localUserObj);
+      //       Local.set(localPwdObj);
+      //     }
+      //     delete data.authorities;
+      //     data.author = 'smoke,cover,environment,device,hydrant,dust,doorLock,geoMonitor,dustbin';
+      //     this.$store.commit('SET_USERINFO', data);
+      //     this.$router.push({ path: '/list' });
+      //   } else {
+      //     this.errText = '用户名或密码错误';
+      //     this.showTip = true;
+      //   }
+      // });
     },
   },
 };
