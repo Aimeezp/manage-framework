@@ -2,7 +2,7 @@ import Mock from 'mockjs';
 
 const record = [];
 const statusArr = [0, 1];
-const equipType = ['井盖监测器', '烟感报警器'];
+const equipType = ['猫猫', '咪咪'];
 const dmpGrounp = ['烟感', '井盖'];
 const phone = [135, 136, 137, 138, 139, 147, 150, 151, 152, 157, 158, 159, 187, 188,
   130, 131, 132, 155, 156, 185, 186, 133, 153, 180, 189];

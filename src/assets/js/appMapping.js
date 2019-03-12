@@ -23,9 +23,9 @@ export const appMapping = {
   water: 'water-monitor',
 };
 export const deviceTypeTxtMapping = {
-  smoke: '烟感',
-  environment: '环境',
-  cover: '井盖',
+  smoke: 'panpan',
+  environment: 'dingding',
+  cover: 'liangliang',
   doorlock: '门磁',
   dust: '扬尘',
   dustbin: '垃圾箱',
