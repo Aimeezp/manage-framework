@@ -37,7 +37,7 @@ export default {
         this.layoutStr = 'total, sizes, prev, pager, next, jumper';
       } else {
         this.layoutStr = 'total, prev, pager, next, jumper';
-        this.pageSize = 6;
+        // this.pageSize = 6;
       }
     },
     jumpToFirst() {
@@ -45,7 +45,8 @@ export default {
     },
     handleSizeChange(val) {
       this.pageSize = val;
-      this.$parent.pageSizeFun();
+      if (this.$parent.pageSizeFun) this.$parent.pageSizeFun();
+      this.$emit('size-change', val);
     },
   },
 };
@@ -64,8 +65,8 @@ export default {
     /*bottom:0;*/
     /*right:20px;*/
     .el-pagination {
-      float: right;
-      width:100%;
+      // float: right;
+      // width:100%;
       text-align: right;
       button{
         min-width:30px;
