@@ -5,5 +5,6 @@ import * as accountManageApi from './projectApi/systemManage/accountManageApi';
 import * as roleManageApi from './projectApi/systemManage/roleManageApi';
 import * as otherMaintainApi from './projectApi/otherMaintainApi';
 import * as backendManageApi from './projectApi/backendManageApi';
+import * as statisticsBoardApi from './projectApi/statisticsBoardApi';
 
-window.vaApi = Object.assign(...[{}, commonApi, testListApi, accountManageApi, deviceTypeApi, roleManageApi, otherMaintainApi, backendManageApi]);
+window.vaApi = Object.assign(...[{}, commonApi, testListApi, accountManageApi, deviceTypeApi, roleManageApi, otherMaintainApi, backendManageApi, statisticsBoardApi]);

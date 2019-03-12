@@ -16,7 +16,7 @@ function Encrypt(word) {
   const encrypted = CryptoJS.AES.encrypt(srcs, key, { iv, mode: CryptoJS.mode.CBC, padding: CryptoJS.pad.Pkcs7 });
   return encrypted.ciphertext.toString().toUpperCase();
 }
-
+export const keyWordReg = new RegExp('[\u4e00-\u9fa50-9a-zA-Z]');// match chinese english and number
 export default {
   Decrypt,
   Encrypt,

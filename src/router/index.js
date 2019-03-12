@@ -20,6 +20,8 @@ const AccountManage = () =>
   import('../views/SystemManagement/AccountManage');
 const DeviceTypeList = () =>
   import('../views/DeviceType/DeviceTypeList');
+const StatisticsBoard = () =>
+  import('../views/StatisticsBoard');
 const ProjectManage = () =>
   import('../views/ProjectManage');
 const DmpMaintain = () =>
@@ -72,6 +74,18 @@ const routes = [{
       path: '/device-type-list',
       component: DeviceTypeList,
       title: '设备类型管理',
+    },
+  ],
+},
+{
+  path: '/',
+  component: Home,
+  show: true,
+  children: [
+    {
+      path: '/statisticsBoard',
+      component: StatisticsBoard,
+      title: '看板管理',
     },
   ],
 },

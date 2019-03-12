@@ -5,5 +5,6 @@ import accountManageUrl from './systemManage/accountManageUrl';
 import roleManageUrl from './systemManage/roleManageUrl';
 import otherMaintainUrl from './otherMaintainUrl';
 import backendManageUrl from './backendManageUrl';
+import statisticsBoardUrl from './statisticsBoardUrl';
 
-export default Object.assign(...[{}, commonUrl, testListUrl, accountManageUrl, deviceTypeUrl, roleManageUrl, otherMaintainUrl, backendManageUrl]);
+export default Object.assign(...[{}, commonUrl, testListUrl, accountManageUrl, deviceTypeUrl, roleManageUrl, otherMaintainUrl, backendManageUrl, statisticsBoardUrl]);
